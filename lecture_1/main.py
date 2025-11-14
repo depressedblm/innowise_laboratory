@@ -1,14 +1,14 @@
-from colorama import Fore, Back, Style, init
+from colorama import init, Fore, Back, Style
 
-# Инициализация colorama для Windows
+# Initialize colorama with autoreset to prevent color bleeding
 init(autoreset=True)
 
 def main():
-    print(Fore.RED + "Это красный текст")
-    print(Fore.GREEN + "Это зеленый текст")
-    print(Back.YELLOW + "Это текст с желтым фоном")
-    print(Style.BRIGHT + "Это яркий текст")
-    print(Fore.BLUE + Back.WHITE + "Синий текст на белом фоне")
+    # Print colored Hello World examples
+    print(f"{Fore.RED}{Back.YELLOW}Hello World!{Style.RESET_ALL}")
+    print(f"{Fore.GREEN}Hello World in Green!{Style.RESET_ALL}")
+    print(f"{Fore.BLUE}{Style.BRIGHT}Hello World in Bright Blue!{Style.RESET_ALL}")
+    print(f"{Fore.MAGENTA}{Back.CYAN}Hello World with Magenta text and Cyan background!{Style.RESET_ALL}")
 
 if __name__ == "__main__":
     main()
